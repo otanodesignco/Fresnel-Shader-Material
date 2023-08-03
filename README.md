@@ -1,7 +1,12 @@
-# Hologram Material
-Hologram material experiment. The hologram uses a tiled texture, fresnel lighting, diffuse lighting with view direction & surface normals. For the best effect use a smoother model than the Suzanne that is included and test the bias and factor.
+# Fresnel Material
+Fresnel material that creates rim lighting of 3D mesh. There is an option to use the fresnel effect to mask transparency of the mesh for rim lighting only. Pass in the alpha prop of the Torus component of the demo. Allows for fine tuning the effect with the power factor, bias factor, and rim color intensity.
 
-Sample image: using fresnel as alpha / transparent
+sample image: Fresnel Effect
+
+![Fresnel Demo](https://github.com/otanodesignco/Fresnel-Shader-Material/blob/main/fresnel.png?raw=true)
+
+Sample image: Transparent Fresnel Effect
+
 ![Fresnel Alpha Demo](https://github.com/otanodesignco/Fresnel-Shader-Material/blob/main/transparentfresnel.png?raw=true)
 
 to use:
