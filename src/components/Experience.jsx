@@ -4,9 +4,7 @@ export const Experience = () =>
 {
   return (
     <>
-      <Torus
-        alpha={ false }
-      />
+      <Torus />
     </>
   );
 };

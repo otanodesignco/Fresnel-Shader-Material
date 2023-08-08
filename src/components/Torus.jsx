@@ -19,9 +19,9 @@ const uniforms =
 export default function Torus( props )
 {
 
-    const alpha = props.alpha ? props.alpha : false
+    let alpha = props.alpha ? props.alpha : false
 
-    const { FresnelFactor, FresnelBias, FresnelIntensity } = useControls(
+    const { FresnelFactor, FresnelBias, FresnelIntensity, rimColor, bodyColor } = useControls(
         {
           FresnelFactor:
           {
@@ -43,7 +43,15 @@ export default function Torus( props )
             min: 0,
             max: 50,
             step: 0.001
-          }
+          },
+          rimColor:
+          {
+            value: '#02FEFF'
+          },
+          bodyColor:
+          {
+            value: '#0777FD'
+          },
         }
       )
     
@@ -133,6 +141,8 @@ export default function Torus( props )
         model.current.material.uniforms.uFresnelFactor.value = FresnelFactor
         model.current.material.uniforms.uFresnelBias.value = FresnelBias
         model.current.material.uniforms.uIntensity.value = FresnelIntensity
+        model.current.material.uniforms.uRimColor.value = new Color( rimColor )
+        model.current.material.uniforms.uColor.value = new Color( bodyColor )
     
       })
 
