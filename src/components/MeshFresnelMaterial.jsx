@@ -78,7 +78,7 @@ export default function MeshFresnelMaterial(
 
             float alpha = ${ alpha ? 'fresnel;': ' 1.0;'}
 
-            gl_FragColor = vec4( finalColor, alpha );
+            gl_FragColor = ${ alpha ? 'vec4( fresnelColor, fresnel );': 'vec4( finalColor, 1.0 );' } 
         }
     
     `
